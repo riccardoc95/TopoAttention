@@ -20,12 +20,12 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 ### [Denoising](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/denoising)
 - [Galaxy 10 - Reports](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/denoising/galaxy10/report)
 
-| Galaxy10                    | PSNR    | SSIM   | MSE    | NRMSE  |
-|-----------------------------|---------|--------|--------|--------|
-| unet ($\sigma=0.1$)         | 28.4029 | 0.6948 | 0.0014 | 0.0381 |
-| unet_topoatt ($\sigma=0.1$) | 28.5438 | 0.6920 | 0.0012 | 0.0372 |
+| Galaxy10 ($\sigma=0.1$) | PSNR    | SSIM   | MSE    | NRMSE  |
+|--------------|---------|--------|--------|--------|
+| unet         | 28.4029 | 0.6948 | 0.0014 | 0.0381 |
+| unet_topoatt | 28.5438 | 0.6920 | 0.0012 | 0.0372 |
 
-<div align="center">
+<div align="left">
   <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/denoising/galaxy10/report/example.png" alt="Alt text" width="500">
 </div>
 
@@ -33,14 +33,21 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 
 - [Illustris - Reports](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/denoising/illustris/report)
 
-| Illustris                  | PSNR    | SSIM   | MSE    | NRMSE  |
+| Illustris ($\sigma=0.1$) | PSNR    | SSIM   | MSE    | NRMSE  |
+|---------------------------|---------|--------|--------|--------|
+| unet                      | 30.6811 | 0.9103 | 0.0007 | 0.0457 |
+| unet_topoatt  | 34.0184 | 0.9230 | 0.0004 | 0.0267 |
+
+
+| Illustris  ($\sigma=0.2$)  | PSNR    | SSIM   | MSE    | NRMSE  |
 |----------------------------|---------|--------|--------|--------|
-| unet ($\sigma=0.1$)        | 30.6811 | 0.9103 | 0.0007 | 0.0457 |
-| unet_topoatt ($\sigma=0.1$) | 34.0184 | 0.9230 | 0.0004 | 0.0267 |
-| unet ($\sigma=0.2$)        | 16.8410 | 0.8640 | 0.0073 | 0.2834 |
-| unet_topoatt ($\sigma=0.2$) | 31.4819 | 0.8193 | 0.0005 | 0.0386 |
-| unet ($\sigma=0.5$)        | 24.6351 | 0.6488 | 0.0019 | 0.0944 |
-| unet_topoatt ($\sigma=0.5$) | 28.4069 | 0.6878 | 0.0006 | 0.0584 |
+| unet         | 16.8410 | 0.8640 | 0.0073 | 0.2834 |
+| unet_topoatt  | 31.4819 | 0.8193 | 0.0005 | 0.0386 |
+
+| Illustris   ($\sigma=0.5$) | PSNR    | SSIM   | MSE    | NRMSE  |
+|---------------------------|---------|--------|--------|--------|
+| unet         | 24.6351 | 0.6488 | 0.0019 | 0.0944 |
+| unet_topoatt | 28.4069 | 0.6878 | 0.0006 | 0.0584 |
 
 
 ### [Segmentation](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/segmentation)
