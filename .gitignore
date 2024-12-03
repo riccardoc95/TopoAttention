@@ -6,6 +6,26 @@ tests_den
 
 tasks/*
 
+# Re-include specific subdirectories to allow exceptions
+!tasks/classification/
+!tasks/classification/cifar100/
+!tasks/classification/cifar100/metrics/
+!tasks/classification/galaxy10/
+!tasks/classification/galaxy10/metrics/
+
+!tasks/denoising/
+!tasks/denoising/galaxy10/
+!tasks/denoising/galaxy10/metrics/
+!tasks/denoising/illustris/
+!tasks/denoising/illustris/metrics/
+
+!tasks/segmentation/
+!tasks/segmentation/galaxysegment/
+!tasks/segmentation/galaxysegment/metrics/
+!tasks/segmentation/illustris/
+!tasks/segmentation/illustris/metrics/
+
+# Re-include the CSV files and specific Python files
 !tasks/classification/cifar100/metrics/*.csv
 !tasks/classification/galaxy10/metrics/*.csv
 
