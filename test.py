@@ -854,7 +854,7 @@ def validate(
         output_dir=None,
         segm=False,
         extension="png",
-        save_all=True,
+        save_all=False,
 ):
     batch_time_m = utils.AverageMeter()
     losses_m = utils.AverageMeter()

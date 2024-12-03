@@ -81,7 +81,7 @@ if __name__ == "__main__":
     # Replace these paths with your actual folders
     ground_truth_folder = "galaxy10/target"
     for type in ["topo", "no_topo"]:
-        for noise in ["0_1"]:
+        for noise in ["0_2"]:
             reconstructed_folder = f"galaxy10/restored/{type}/{noise}"
 
             results = calculate_metrics(ground_truth_folder, reconstructed_folder)
