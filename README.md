@@ -29,6 +29,16 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 </div>
 
 
+| Galaxy10 ($\sigma=0.2$) | PSNR    | SSIM   | MSE    | NRMSE  |
+|-------------------------|---------|--------|--------|--------|
+| unet                    | 23.0851 | 0.4755 | 0.0049 | 0.0702 |
+| unet_topoatt            | 23.4293 | 0.4685 | 0.0048 | 0.0759 |
+
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/denoising/galaxy10/report/example02.png" alt="Alt text" width="500">
+</div>
+
+
 
 ### Illustris 
 
