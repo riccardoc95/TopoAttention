@@ -25,6 +25,10 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 | unet ($\sigma=0.1$)         | 28.4029 | 0.6948 | 0.0014 | 0.0381 |
 | unet_topoatt ($\sigma=0.1$) | 28.5438 | 0.6920 | 0.0012 | 0.0372 |
 
+<div align="center">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/denoising/galaxy10/report/example.png" alt="Alt text" width="300">
+</div>
+
 
 
 - [Illustris - Reports](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/denoising/illustris/report)
