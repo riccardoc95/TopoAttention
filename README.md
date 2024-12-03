@@ -3,8 +3,7 @@
 Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 
 
-## Tasks
-### [Classification](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/classification)
+## Classification
 
 | Cifar100         | acc@1 | acc@5 |
 |---------------|-------|-------|
@@ -17,8 +16,8 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 | densenet_topoatt | 87.59 | 99.74 |
 
 
-### [Denoising](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/denoising)
-- [Galaxy 10 - Reports](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/denoising/galaxy10/report)
+## Denoising
+### Galaxy 10 
 
 | Galaxy10 ($\sigma=0.1$) | PSNR    | SSIM   | MSE    | NRMSE  |
 |--------------|---------|--------|--------|--------|
@@ -31,7 +30,7 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 
 
 
-- [Illustris - Reports](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/denoising/illustris/report)
+### Illustris 
 
 | Illustris ($\sigma=0.1$) | PSNR    | SSIM   | MSE    | NRMSE  |
 |---------------------------|---------|--------|--------|--------|
@@ -62,9 +61,8 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 </div>
 
 
-### [Segmentation](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/segmentation)
-- [Illustris - Report](https://github.com/riccardoc95/TopoAttention/blob/main/tasks/segmentation/illustris/report/report.pdf)
-
+## Segmentation
+### Illustris 
 | Illustris    | Dice   | IoU    | Pixel Accuracy |
 |--------------|--------|--------|----------------|
 | unet         | 0.8099 | 0.6910 | 0.9755         |
@@ -74,8 +72,7 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
   <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/segmentation/illustris/report/example.png" alt="Alt text" width="500">
 </div>
 
-- [GalaxySegment - Report](https://github.com/riccardoc95/TopoAttention/blob/main/tasks/segmentation/galaxysegment/report/report.pdf)
-
+### GalaxySegment
 | GalaxySegment | Dice   | IoU    | Pixel Accuracy |
 |---------------|--------|--------|----------------|
 | unet          | 0.6287 | 0.4867 | 0.7767         |
