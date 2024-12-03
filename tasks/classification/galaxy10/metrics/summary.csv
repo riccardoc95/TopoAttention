@@ -1,0 +1,3 @@
+model,acc@1,acc@5
+densenet,85.96,99.46
+topo_densenet,87.59,99.74
