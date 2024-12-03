@@ -12,27 +12,39 @@ tasks/*
 !tasks/classification/cifar100/metrics/
 !tasks/classification/galaxy10/
 !tasks/classification/galaxy10/metrics/
+!tasks/classification/report
 
 !tasks/denoising/
 !tasks/denoising/galaxy10/
 !tasks/denoising/galaxy10/metrics/
+!tasks/denoising/galaxy10/report/
 !tasks/denoising/illustris/
 !tasks/denoising/illustris/metrics/
+!tasks/denoising/illustris/report/
 
 !tasks/segmentation/
 !tasks/segmentation/galaxysegment/
 !tasks/segmentation/galaxysegment/metrics/
+!tasks/segmentation/galaxysegment/report/
 !tasks/segmentation/illustris/
 !tasks/segmentation/illustris/metrics/
+!tasks/segmentation/illustris/report/
 
 # Re-include the CSV files and specific Python files
 !tasks/classification/cifar100/metrics/*.csv
 !tasks/classification/galaxy10/metrics/*.csv
 
+!tasks/classification/cifar100/report/*.pdf
+!tasks/classification/galaxy10/report/*.pdf
+
 !tasks/denoising/galaxy10/metrics/*_summary.csv
 !tasks/denoising/illustris/metrics/*_summary.csv
+!tasks/denoising/galaxy10/report/*.pdf
+!tasks/denoising/illustris/report/*.pdf
 !tasks/denoising/metrics.py
 
 !tasks/segmentation/galaxysegment/metrics/*_summary.csv
 !tasks/segmentation/illustris/metrics/*_summary.csv
+!tasks/segmentation/galaxysegment/report/*.pdf
+!tasks/segmentation/illustris/report/*.pdf
 !tasks/segmentation/metrics.py
