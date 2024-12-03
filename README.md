@@ -38,16 +38,28 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 | unet                      | 30.6811 | 0.9103 | 0.0007 | 0.0457 |
 | unet_topoatt  | 34.0184 | 0.9230 | 0.0004 | 0.0267 |
 
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/denoising/illustris/report/example01.png" alt="Alt text" width="500">
+</div>
+
 
 | Illustris  ($\sigma=0.2$)  | PSNR    | SSIM   | MSE    | NRMSE  |
 |----------------------------|---------|--------|--------|--------|
 | unet         | 16.8410 | 0.8640 | 0.0073 | 0.2834 |
 | unet_topoatt  | 31.4819 | 0.8193 | 0.0005 | 0.0386 |
 
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/denoising/illustris/report/example02.png" alt="Alt text" width="500">
+</div>
+
 | Illustris   ($\sigma=0.5$) | PSNR    | SSIM   | MSE    | NRMSE  |
 |---------------------------|---------|--------|--------|--------|
 | unet         | 24.6351 | 0.6488 | 0.0019 | 0.0944 |
 | unet_topoatt | 28.4069 | 0.6878 | 0.0006 | 0.0584 |
+
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/denoising/illustris/report/example05.png" alt="Alt text" width="500">
+</div>
 
 
 ### [Segmentation](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/segmentation)
@@ -58,9 +70,17 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 | unet         | 0.8099 | 0.6910 | 0.9755         |
 | unet_topoatt | 0.8386 | 0.7656 | 0.9796         |
 
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/segmentation/illustris/report/example.png" alt="Alt text" width="500">
+</div>
+
 - [GalaxySegment - Report](https://github.com/riccardoc95/TopoAttention/blob/main/tasks/segmentation/galaxysegment/report/report.pdf)
 
 | GalaxySegment | Dice   | IoU    | Pixel Accuracy |
 |---------------|--------|--------|----------------|
 | unet          | 0.6287 | 0.4867 | 0.7767         |
 | unet_topoatt  | 0.6500 | 0.5095 | 0.7806         |
+
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/segmentation/galaxysegment/report/example.png" alt="Alt text" width="500">
+</div>
