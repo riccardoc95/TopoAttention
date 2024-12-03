@@ -5,6 +5,7 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 
 ## Tasks
 ### [Classification](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/classification)
+[View the CSV file](https://github.com/riccardoc95/TopoAttention/blob/main/tasks/classification/cifar100/metrics/summary.csv)
 - [Report](https://github.com/riccardoc95/TopoAttention/blob/main/tasks/classification/report/report.pdf)
 
 ### [Denoising](https://github.com/riccardoc95/TopoAttention/tree/main/tasks/denoising)
