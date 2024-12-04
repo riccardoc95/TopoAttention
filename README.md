@@ -40,7 +40,7 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 
 
 
-| Galaxy10 ($\sigma=0.2$) | PSNR    | SSIM   | MSE    | NRMSE  |
+| Galaxy10 ($\sigma=0.5$) | PSNR    | SSIM   | MSE    | NRMSE  |
 |-------------------------|---------|--------|--------|--------|
 | unet                    | 21.8421 | 0.3778 | 0.0066 | 0.0811 |
 | unet_topoatt            | 21.5456 | 0.3657 | 0.0071 | 0.0841 |
