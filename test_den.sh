@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MODEL="unet43"
+MODEL="unet33"
 DATASET="galaxy10"
 DEVICE="mps"
 
@@ -12,7 +12,6 @@ python test.py \
     --train-split "train" \
     --val-split "validation" \
     --dataset-download \
-    --topo\
     --model "${MODEL}" \
     --gp "avg" \
     --num-classes 10 \
@@ -29,10 +28,10 @@ python test.py \
     --min-lr 0.0008 \
     --device "${DEVICE}" \
     --output "tests/${MODEL}_${DATASET}"\
-    --output-img "tasks/denoising/galaxy10/restored/topo/0_2/"\
+    --output-img "tasks/denoising/galaxy10/restored/no_topo/0_5/"\
     --save-image \
     --denoising \
-    --noise-level 0.2 \
+    --noise-level 0.5 \
     --mean 0.5 \
     --std 0.5 \
-    --resume "tasks/denoising/galaxy10/models/topo/0_2/last.pth.tar"
+    --resume "tasks/denoising/galaxy10/models/no_topo/0_5/last.pth.tar"
