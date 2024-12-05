@@ -4,6 +4,10 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 
 
 ## Classification
+| MNIST         | acc@1 | acc@5 |
+|---------------|-------|-------|
+| densenet      | 98.89 | 99.99 |
+| topo_densenet | 98.87 | 100.00 |
 
 | Cifar100         | acc@1 | acc@5 |
 |---------------|-------|-------|
@@ -17,6 +21,38 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 
 
 ## Denoising
+### MNIST 
+
+| MNIST ($\sigma=0.1$) | PSNR                 | SSIM                | MSE                 | NRMSE               |
+|--------------|----------------------|---------------------|---------------------|---------------------|
+| unet         | 30.2288 $\pm$ 1.4838 | 0.9837 $\pm$ 0.0071 | 0.0010 $\pm$ 0.0003 | 0.0312 $\pm$ 0.0052 |
+| unet_topoatt | 30.3868 $\pm$ 1.4754 | 0.9847 $\pm$ 0.0067 | 0.0009 $\pm$ 0.0003 | 0.0306 $\pm$ 0.0050 |
+
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/denoising/mnist/report/example01.png" alt="Alt text" width="500">
+</div>
+
+
+| MNIST ($\sigma=0.2$) | PSNR                 | SSIM                | MSE                 | NRMSE               |
+|----------------------|----------------------|---------------------|---------------------|---------------------|
+| unet                 | 20.9535 $\pm$ 1.8546 | 0.8820 $\pm$ 0.0448 | 0.0087 $\pm$ 0.0034 | 0.0915 $\pm$ 0.0183 |
+| unet_topoatt         | 20.8629 $\pm$ 1.8653 | 0.8808 $\pm$ 0.0455 | 0.0089 $\pm$ 0.0034 | 0.0925 $\pm$ 0.0186 |
+
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/denoising/mnist/report/example02.png" alt="Alt text" width="500">
+</div>
+
+
+
+| MNIST ($\sigma=0.5) | PSNR                 | SSIM                | MSE                 | NRMSE                |
+|---------------------|----------------------|---------------------|---------------------|----------------------|
+| unet                | 15.3975 $\pm$ 0.8118 | 0.5673 $\pm$ 0.1133 | 0.0293 $\pm$ 0.0053 | 0.1706 $\pm$ 0.0157  |
+| unet_topoatt        | 26.0487 $\pm$ 1.4928 | 0.9596 $\pm$ 0.0150 | 0.0026 $\pm$ 0.0008 | 0.0505 $\pm$ 0.0082  |
+
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/denoising/mnist/report/example05.png" alt="Alt text" width="500">
+</div>
+
 ### Galaxy 10 
 
 | Galaxy10 ($\sigma=0.1$) | PSNR    | SSIM   | MSE    | NRMSE  |
@@ -83,6 +119,16 @@ Training module: [TIMM](https://github.com/huggingface/pytorch-image-models)
 
 
 ## Segmentation
+### MNIST 
+| MNIST        | Dice                | IoU                 | Pixel Accuracy      |
+|--------------|---------------------|---------------------|---------------------|
+| unet         | 0.9986 $\pm$ 0.0029 | 0.9972 $\pm$ 0.0057 | 0.9995 $\pm$ 0.0008 |
+| unet_topoatt | 0.9981 $\pm$ 0.0035       | 0.9963 $\pm$ 0.0069       | 0.9994 $\pm$ 0.0009       |
+
+<div align="left">
+  <img src="https://github.com/riccardoc95/TopoAttention/blob/main/tasks/segmentation/mnist/report/example.png" alt="Alt text" width="500">
+</div>
+
 ### Illustris 
 | Illustris    | Dice   | IoU    | Pixel Accuracy |
 |--------------|--------|--------|----------------|
