@@ -45,7 +45,7 @@ def calculate_metrics(gt_path, rec_path):
 
         # Calculate metrics
         psnr_value = psnr(gt_image, rec_image, data_range=gt_image.max() - gt_image.min())
-        ssim_value = ssim(gt_image, rec_image, data_range=gt_image.max() - gt_image.min(), channel_axis=2, multichannel=False)
+        ssim_value = ssim(gt_image, rec_image, data_range=gt_image.max() - gt_image.min(), multichannel=False)
         mse_value = mse(gt_image, rec_image)
         nrmse_value = np.sqrt(mse_value) / (gt_image.max() - gt_image.min())
 
@@ -79,16 +79,16 @@ def remove_outliers(df, columns=None):
 # Example usage:
 if __name__ == "__main__":
     # Replace these paths with your actual folders
-    ground_truth_folder = "galaxy10/target"
+    ground_truth_folder = "mnist/target"
     for type in ["topo", "no_topo"]:
-        for noise in ["0_5"]:
-            reconstructed_folder = f"galaxy10/restored/{type}/{noise}"
+        for noise in ["0_1", "0_2", "0_5"]:
+            reconstructed_folder = f"mnist/restored/{type}/{noise}"
 
             results = calculate_metrics(ground_truth_folder, reconstructed_folder)
             noise_save = noise.replace("_",".")
-            pd.DataFrame(results).to_csv(f"galaxy10/metrics/metrics_{type}_{noise_save}.csv", index=False)
-            pd.DataFrame(results).describe().to_csv(f"galaxy10/metrics/metrics_{type}_{noise_save}_summary.csv", index=False)
-            remove_outliers(pd.DataFrame(results)).describe().to_csv(f"galaxy10/metrics/metrics_{type}_{noise_save}_summary_no_out.csv",
+            pd.DataFrame(results).to_csv(f"mnist/metrics/metrics_{type}_{noise_save}.csv", index=False)
+            pd.DataFrame(results).describe().to_csv(f"mnist/metrics/metrics_{type}_{noise_save}_summary.csv", index=False)
+            remove_outliers(pd.DataFrame(results)).describe().to_csv(f"mnist/metrics/metrics_{type}_{noise_save}_summary_no_out.csv",
                                                     index=False)
 
     # Print results

@@ -908,13 +908,13 @@ def validate(
                                 fits.writeto(output_name_target, img_target, overwrite=True)
                         else:
                             if not segm:
-                                save_array_as_image(img.transpose((1, 2, 0)), output_name)
+                                save_array_as_image(img, output_name)
                             else:
                                 save_array_as_image(img, output_name)
                             if save_all:
-                                save_array_as_image(img_input.transpose((1, 2, 0)), output_name_input)
+                                save_array_as_image(img_input, output_name_input)
                                 if not segm:
-                                    save_array_as_image(img_target.transpose((1, 2, 0)), output_name_target)
+                                    save_array_as_image(img_target, output_name_target)
                                 else:
                                     save_array_as_image(img_target, output_name_target)
                         n_img += 1

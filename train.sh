@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MODEL="topodensenet121"
+MODEL="densenet121small"
 DATASET="mnist"
 DEVICE="mps"
 
@@ -11,21 +11,19 @@ python train.py \
     --train-split "train" \
     --val-split "validation" \
     --dataset-download \
-    --topo \
     --model "${MODEL}" \
     --gp "avg" \
-    --num-classes 100 \
+    --num-classes 10 \
     --img-size 28 \
     --in-chans 1 \
     --input-size 1 28 28 \
     --batch-size 512 \
     --sched multistep \
     --lr-base 0.1 \
-    --epochs 200 \
-    --decay-milestones 10 50 100 \
+    --epochs 100 \
+    --decay-milestones 20 20 20 \
     --decay-rate 0.2 \
     --warmup-epochs 0 \
     --min-lr 0.0008 \
     --device "${DEVICE}" \
-    --output "output/${MODEL}_${DATASET}"\
-    --denoising \
+    --output "output/${MODEL}_${DATASET}"

@@ -265,8 +265,14 @@ class DenoisingDataset(torch.utils.data.Dataset):
         image = self.dataset[idx][0]  # Ignore the label from ImageFolder
         noised_image = self.dataset[idx][0].copy()
 
-        image = np.array(image).transpose((2, 0, 1)).astype(np.float32) / 255.
-        noised_image = np.array(noised_image).transpose((2, 0, 1)).astype(np.float32) / 255.
+        if len(np.array(image).shape) == 3:
+            image = np.array(image).transpose((2, 0, 1)).astype(np.float32) / 255.
+            noised_image = np.array(noised_image).transpose((2, 0, 1)).astype(np.float32) / 255.
+        else:
+            image = np.array(image).astype(np.float32) / 255.
+            noised_image = np.array(noised_image).astype(np.float32) / 255.
+            image = np.expand_dims(image, axis=0)
+            noised_image = np.expand_dims(noised_image, axis=0)
 
         noised_image = self.add_noise(noised_image)
 
@@ -309,10 +315,19 @@ class SegmentationDataset(torch.utils.data.Dataset):
         image = self.dataset[idx][0]
         mask = self.dataset[idx][0].copy()
 
-        image = np.array(image).transpose((2, 0, 1)).astype(np.float32) / 255.
-        mask = np.array(mask).transpose((2, 0, 1)).astype(np.float32) / 255.
+        if len(np.array(image).shape) == 3:
+            image = np.array(image).transpose((2, 0, 1)).astype(np.float32) / 255.
+            mask = np.array(mask).transpose((2, 0, 1)).astype(np.float32) / 255.
+        else:
+            image = np.array(image).astype(np.float32) / 255.
+            mask = np.array(mask).astype(np.float32) / 255.
+            image = np.expand_dims(image, axis=0)
+            #mask = np.expand_dims(mask, axis=0)
 
-        mask = (self.rgb2gray(mask) > self.segmentation_level) * 1
+        if len(mask.shape) == 3:
+            mask = (self.rgb2gray(mask) > self.segmentation_level) * 1
+        else:
+            mask = (mask > self.segmentation_level) * 1
         if len(mask.shape) < 3:
             mask = np.expand_dims(mask, axis=0)
 

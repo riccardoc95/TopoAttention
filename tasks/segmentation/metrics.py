@@ -74,13 +74,13 @@ def calculate_segmentation_metrics(gt_path, pred_path):
 # Example usage:
 if __name__ == "__main__":
     # Replace these paths with your actual folders
-    ground_truth_folder = "galaxysegment/target"
+    ground_truth_folder = "mnist/target"
     for type in ["topo", "no_topo"]:
-        predicted_folder = f"galaxysegment/restored/{type}/"
+        predicted_folder = f"mnist/restored/{type}/"
 
         results = calculate_segmentation_metrics(ground_truth_folder, predicted_folder)
-        pd.DataFrame(results).to_csv(f"galaxysegment/metrics/metrics_{type}.csv", index=False)
-        pd.DataFrame(results).describe().to_csv(f"galaxysegment/metrics/metrics_{type}_summary.csv", index=False)
+        pd.DataFrame(results).to_csv(f"mnist/metrics/metrics_{type}.csv", index=False)
+        pd.DataFrame(results).describe().to_csv(f"mnist/metrics/metrics_{type}_summary.csv", index=False)
 
     # Print results
     #for res in results:
